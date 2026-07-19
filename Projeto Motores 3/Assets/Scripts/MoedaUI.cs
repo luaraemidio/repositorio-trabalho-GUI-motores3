@@ -6,6 +6,12 @@ public class MoedaUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI coinText;
     private int coinCount = 0;
 
+    private void Awake()
+    {
+        
+        PlayerOM.OnCoinCollected -= UpdateCoinCount; 
+    }
+
     private void OnEnable()
     {
         PlayerOM.OnCoinCollected += UpdateCoinCount;

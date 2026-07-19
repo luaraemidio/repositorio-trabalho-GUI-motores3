@@ -3,25 +3,43 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    void Awake()
+    private static GameManager instance;
+    private bool scenesLoaded = false;
+
+    private void Awake()
     {
+        
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
+    private void Start()
     {
-        
-        LoadSceneIfNotLoaded("GetStarted_Scene");
-
-        
-        LoadSceneIfNotLoaded("GUI");
+        if (!scenesLoaded)
+        {
+            scenesLoaded = true;
+            LoadAdditiveScenes();
+        }
+        PlayerOM.ClearListeners();
     }
 
-    private void LoadSceneIfNotLoaded(string sceneName)
+    private void LoadAdditiveScenes()
     {
-        if (!SceneManager.GetSceneByName(sceneName).isLoaded)
+        
+        if (SceneManager.GetSceneByName("GetStarted_Scene").isLoaded == false)
         {
-            SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync("GetStarted_Scene", LoadSceneMode.Additive);
+        }
+
+        
+        if (SceneManager.GetSceneByName("GUI").isLoaded == false)
+        {
+            SceneManager.LoadSceneAsync("GUI", LoadSceneMode.Additive);
         }
     }
 }

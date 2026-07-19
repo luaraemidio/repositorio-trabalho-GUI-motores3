@@ -9,4 +9,10 @@ public static class PlayerOM
     {
         OnCoinCollected?.Invoke();
     }
+
+    
+    public static void ClearListeners()
+    {
+        OnCoinCollected = null;
+    }
 }
