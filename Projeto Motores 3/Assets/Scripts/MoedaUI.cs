@@ -4,28 +4,27 @@ using TMPro;
 public class MoedaUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI coinText;
-    private int coinCount = 0;
+    
 
     private void Awake()
     {
         
-        PlayerOM.OnCoinCollected -= UpdateCoinCount; 
+        PlayerOM.OnCoinChanged -= UpdateCoinCount; 
     }
 
     private void OnEnable()
     {
-        PlayerOM.OnCoinCollected += UpdateCoinCount;
+        PlayerOM.OnCoinChanged += UpdateCoinCount;
     }
 
     private void OnDisable()
     {
-        PlayerOM.OnCoinCollected -= UpdateCoinCount;
+        PlayerOM.OnCoinChanged-= UpdateCoinCount;
     }
 
-    private void UpdateCoinCount()
+    private void UpdateCoinCount(int moeda)
     {
-        coinCount++;
         if (coinText != null)
-            coinText.text = $"Moedas: {coinCount}";
+            coinText.text = $"Moedas: {moeda}";
     }
 }

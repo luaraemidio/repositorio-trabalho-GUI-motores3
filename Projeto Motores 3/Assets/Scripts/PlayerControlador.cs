@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerControlador : MonoBehaviour
 {
+    private int coinCount;
 
     private Vector3 startPosition;
 
@@ -13,7 +14,8 @@ public class PlayerControlador : MonoBehaviour
     {
         if (other.CompareTag("Coin"))
         {
-            PlayerOM.CollectCoin();
+            coinCount++;
+            PlayerOM.ChangeCoinCount(coinCount);
             Destroy(other.gameObject);
         }
     }
