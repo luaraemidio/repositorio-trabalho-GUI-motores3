@@ -891,12 +891,13 @@ Transform:
   m_GameObject: {fileID: 1249966526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.84994, y: 4.98, z: 1.3673}
+  m_LocalPosition: {x: -1.98, y: 4.92, z: 1.3673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1631865637}
+  - {fileID: 1840081574}
   - {fileID: 1143487094}
+  - {fileID: 1631865637}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1313971860
@@ -1399,23 +1400,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1249966527}
     m_Modifications:
     - target: {fileID: 3936025785924280513, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_Name
       value: MoedaColetavel
       objectReference: {fileID: 0}
     - target: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.100000046
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1124266
+      value: 3.0924268
       objectReference: {fileID: 0}
     - target: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2817507
+      value: 1.3617506
       objectReference: {fileID: 0}
     - target: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.876354
+      value: -9.243654
       objectReference: {fileID: 0}
     - target: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1427,11 +1432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1450,6 +1455,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
+--- !u!4 &1840081574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
+  m_PrefabInstance: {fileID: 1840081573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1872414488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,7 +1876,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3936025785924280513, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_Name
-      value: MoedaColetavel
+      value: MoedaColetavel3
       objectReference: {fileID: 0}
     - target: {fileID: 5690833350552256735, guid: a5ce8eee08ef5f34fb1f72d249835e93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2733,4 +2743,3 @@ SceneRoots:
   - {fileID: 1108780417}
   - {fileID: 1249966527}
   - {fileID: 902595385}
-  - {fileID: 1840081573}
